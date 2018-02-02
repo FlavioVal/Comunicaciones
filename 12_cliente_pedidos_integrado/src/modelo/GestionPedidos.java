@@ -30,7 +30,6 @@ public class GestionPedidos {
 				ob.put("producto", producto);
 				ob.put("unidades", unidades);
 				salida.println(ob.toJSONString());
-				salida.flush();
 		}
 		catch(IOException ex) {
 			ex.printStackTrace();
@@ -46,7 +45,7 @@ public class GestionPedidos {
 			JSONObject oper=new JSONObject();
 			oper.put("operacion", "recuperacion");
 			salida.println(oper.toJSONString());
-			//salida.flush();
+
 			//recogemos el array JSON y lo transformamos
 			//en un arraylist de objetos Pedido
 			JSONParser parser=new JSONParser();
